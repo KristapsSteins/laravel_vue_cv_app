@@ -2,19 +2,17 @@
     <div class="mb-3">
         <div
             class="row mx-1 mb-2 p-2"
-            :class="{ 'shadow-sm bg-white border rounded': editable }">
-            <div class="col py-2 d-flex flex-column gap-0">
-                <div class="d-flex justify-content-between">
-                    <span class="fw-bold">{{ education.degree }}</span>
-                    <span
-                        >{{ formatDate(education.school_start_date) }} -
-                        {{
-                            education.currently_studying
-                                ? "now"
-                                : formatDate(education.school_end_date)
-                        }}</span>
+            :class="{ 'shadow-sm bg-white border rounded py-2': editable }">
+            <div class="col d-flex flex-column gap-0">
+                <div class="row">
+                    <div class="col-lg-6 fw-bold item_text">
+                        {{ education.degree }}
+                    </div>
+                    <div class="col-lg-6 item_text text-end">
+                        {{ formatDate(education.school_start_date) }} - {{education.currently_studying ? "now" : formatDate(education.school_end_date)}}
+                    </div>
                 </div>
-                <span>{{ education.school }}</span>
+                <span class="item_text">{{ education.school }}</span>
             </div>
             <div
                 class="col pt-2 d-flex gap-2 align-items-start justify-content-end"

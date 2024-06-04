@@ -4,22 +4,17 @@
             class="row mx-1 mb-2 py-1"
             :class="{ 'shadow-sm bg-white border rounded': editable }">
             <div class="col d-flex flex-column gap-0">
-                <div class="d-flex pt-2 justify-content-between">
-                    <span
-                        ><span class="fw-bold">{{ experience.job_title }}</span>
-                        {{
-                            experience.is_remote ? "(Remote)" : "(On-site)"
-                        }}</span>
-                    <span>{{ formatDate(experience.start_date) }} -
-                        {{
-                            experience.is_current_job
-                                ? "now"
-                                : formatDate(experience.end_date)
-                        }}</span>
+                <div class="row">
+                    <div class="col-lg-6 fw-bold item_text">
+                        {{ experience.job_title }}{{experience.is_remote ? " (Remote)" : " (On-site)"}}
+                    </div>
+                    <div class="col-lg-6 item_text text-end">
+                        {{ formatDate(experience.start_date) }} - {{experience.is_current_job ? "now" : formatDate(experience.end_date)}}
+                    </div>
                 </div>
-                <span>{{ experience.company_name }}</span>
+                <span class="item_text">{{ experience.company_name }}</span>
                 <ul>
-                    <li
+                    <li class="item_text"
                         v-for="task in experience.job_description"
                         :key="task.id">
                         {{ task }}

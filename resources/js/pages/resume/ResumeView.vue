@@ -39,7 +39,7 @@
                             <td class="text-center">
                                 {{ formatDate(resume.created_at) }}
                             </td>
-                            <td class="text-end">
+                            <td class="d-flex flex-nowrap justify-content-end">
                                 <button
                                     type="button"
                                     class="btn btn-primary mx-1"

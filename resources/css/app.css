@@ -7,6 +7,10 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
+.item_text {
+    font-size: 1.1rem;
+}
+
 @media print {
     @page {
         size: A4;
@@ -19,5 +23,19 @@ body {
 @media print {
     .modal-body {
         border: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .item_text {
+        font-size: 0.9rem;
+        text-align: left !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .item_text {
+        font-size: 1rem;
+        text-align: left !important;
     }
 }

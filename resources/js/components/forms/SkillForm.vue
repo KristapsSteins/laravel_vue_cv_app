@@ -1,7 +1,7 @@
 <template>
-    <div class="row" style="min-height: 550px">
+    <div class="row skills" style="min-height: 550px">
         <div
-            class="col-6"
+            class="col-sm-6"
             style="
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border: 1px solid #ddd;
@@ -22,19 +22,19 @@
             <div
                 class="shadow-sm bg-white border rounded mx-1 mb-2 py-1 px-1 d-flex gap-2"
                 @click="addSkill(skill.skill_name)"
-                style="cursor: pointer"
+                style="cursor: pointer;"
                 v-for="(skill, index) in availableSkills"
                 :key="index">
-                <button type="button" class="btn btn-sm btn-primary">
+                <button type="button" class="btn btn-sm btn-primary skill-item" style="max-height: 30px;">
                     <i class="fa-solid fa-plus"></i>
                 </button>
-                <h5 class="fw-bold mb-0 align-self-center">
+                <h5 class="fw-bold mb-0 align-self-center skill-item">
                     {{ skill.skill_name }}
                 </h5>
             </div>
         </div>
         <div
-            class="col-6"
+            class="col-sm-6"
             style="
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 border: 1px solid #ddd;
@@ -48,7 +48,7 @@
                 style="cursor: pointer"
                 v-for="(skill, index) in skills"
                 :key="index">
-                <button type="button" class="btn btn-sm btn-danger">
+                <button type="button" class="btn btn-sm btn-danger" style="max-height: 30px;">
                     <i class="fa-solid fa-trash"></i>
                 </button>
                 <h5 class="fw-bold mb-0 align-self-center">{{ skill }}</h5>
@@ -125,3 +125,17 @@ export default {
     },
 };
 </script>
+
+<style scoped>
+@media (max-width: 768px) {
+    .skills h5 {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .skills h5 {
+        font-size: 1rem;
+    }
+}
+</style>

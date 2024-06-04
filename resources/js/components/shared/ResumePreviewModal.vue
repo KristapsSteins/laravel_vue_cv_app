@@ -25,8 +25,8 @@
                     >{{ skill }} |
                 </span>
                 <div class="section-title mt-3">Education</div>
-                <div class="text-start">
-                    <c
+                <div class="text-start modal-item">
+                    <EducationItem
                         v-for="education in this.previewResumeData.educations"
                         :key="education.id"
                         :education="education"
@@ -178,5 +178,41 @@ export default {
     flex-grow: 1;
     border-bottom: 1px dashed;
     margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+    .modal-body h1 {
+        font-size: 1.7rem;
+    }
+    .modal-body p {
+        font-size: 0.85rem;
+    }
+    .modal-body span {
+        font-size: 0.85rem;
+    }
+    .section-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .modal-content {
+        width: 70%;
+    }
+    .modal-body h1 {
+        font-size: 1.9rem;
+    }
+    .modal-body p {
+        font-size: 1rem;
+    }
+    .modal-body span {
+        font-size: 1rem;
+    }
+    .section-title {
+        font-size: 1.4rem;
+    }
 }
 </style>
