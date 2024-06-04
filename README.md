@@ -6,7 +6,7 @@ This is a Vue.js and Laravel 11.9 project for managing cv.
 
 ## Prerequisites
 
--   PHP 8.2
+-   PHP 8.2 or higher
 -   Composer
 -   Node.js and npm
 -   PostgreSQL (Make sure to set the database connection in .env to PostgreSQL)
@@ -46,6 +46,10 @@ This is a Vue.js and Laravel 11.9 project for managing cv.
 1. Start the local development server:
     ```sh
     php artisan serve
+    ```
+2. Start the Vue.js server:
+    ```sh
+    npm run dev
     ```
     
 You can now access the server at http://localhost:8000
